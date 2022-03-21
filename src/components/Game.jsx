@@ -36,6 +36,9 @@ const StyledGame = styled(motion.div)`
     height: 100%;
     object-fit: cover;
   }
+  img:hover {
+    cursor: pointer;
+  }
 `;
 
 export default Game;
