@@ -7,12 +7,12 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
 }
 html{
-    &::-webkit-scrollbar{
+    /* &::-webkit-scrollbar{
         width: 0.5rem;
     }
     &::-webkit-scrollbar-thumb{
         background-color: darkrgray;
-    }
+    } */
     body{
         font-family: sans-serif;
     }
@@ -34,7 +34,6 @@ html{
         text-decoration: none;
     }
 }
-
 
 `;
 

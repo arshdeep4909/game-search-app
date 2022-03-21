@@ -3,10 +3,21 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import gamesReducer from "../reducers/gamesReducer";
+import { useDispatch } from "react-redux";
+import { loadDetail } from "../actions/deatilAction";
 
 const Game = ({ name, id, image }) => {
+  //LOAD DETAILS
+  const dispatch = useDispatch();
+  //Event Handlers
+  // we have to pass down our id from our home component where we exported the id
+  //from our API call when we were dispatching our game
+  const loadDetailHandler = () => {
+    dispatch(loadDetail(id));
+  };
+
   return (
-    <StyledGame>
+    <StyledGame onClick={loadDetailHandler}>
       <h3>Game name: {name}</h3>
       <p>Released Date</p>
       <img src={image} alt={name} />

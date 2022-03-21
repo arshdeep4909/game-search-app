@@ -63,7 +63,7 @@ const GameList = styled(motion.div)`
   }
 `;
 const Games = styled(motion.div)`
-  min-height: 80vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   //auto-fit - fit as many items as we can with the dimension in that row
