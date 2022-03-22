@@ -15,6 +15,7 @@ const Game = ({ name, id, image }) => {
   // we have to pass down our id from our home component where we exported the id
   //from our API call when we were dispatching our game
   const loadDetailHandler = () => {
+    document.body.style.overflow = "hidden";
     dispatch(loadDetail(id));
   };
 
@@ -35,13 +36,12 @@ const StyledGame = styled(motion.div)`
   text-align: center;
   border-radius: 1rem;
   overflow: hidden;
+  cursor: pointer;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  img:hover {
-    cursor: pointer;
   }
 `;
 
